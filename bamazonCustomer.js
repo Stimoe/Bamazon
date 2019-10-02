@@ -37,7 +37,7 @@ function start(){
                 displayProducts();
                 break;
 
-            case "exit":
+            case "Exit":
                 connection.end();
                 break;
         }
@@ -100,7 +100,7 @@ function updateProduct(answer, stock, answerId) {
         ],
         function (err, stock) {
             if (err) throw err;
-            console.log(stock + " products updated!\n");
+            console.log("Products updated!\n");
             // Call deleteProduct AFTER the UPDATE completes
             start();
         }

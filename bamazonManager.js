@@ -65,7 +65,7 @@ function showProducts() {
         if (err) throw err;
         // Log all results of the SELECT statement
         console.table(res);
-        connection.end();
+        menuOptions();
     });
 }
 
@@ -74,7 +74,7 @@ function showLowInventory() {
     connection.query(query, function (err, res) {
         if (err) throw err;
         for (var i = 0; i < res.length; i++) {
-            console.log(res[i].stock_quantity, res[i].product_name);
+            console.log("The product that has low inventory is ", res[i].product_name+ " The level of inventory is " + res[i].stock_quantity);
         }
         menuOptions()
     });
