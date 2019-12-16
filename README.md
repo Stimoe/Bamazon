@@ -1,4 +1,4 @@
-Bamazon
+Bamazon by Thomas Stimac
 
 This application show the begining of how mysql works.  In combination with the requirer npm module. This app creates a table of products that the user can intereact with, get cost and quantities and interact through prompts to see different results.
 
@@ -26,7 +26,7 @@ you should see,
 ![Start the app](./assets/images/1stCustomerView.png?raw=true "Starting bamazonCustomer.js app")
 
 You will see two options from the requirer npm.
-1st is to see all the products for sell.
+First is to see all the products for sell.
 The other is to exit.
 Use the arrow keys no navigate.
 If you choose the "View Products for Sale"
@@ -100,6 +100,7 @@ The last option is exit which quits the app.
 Those are the basics of the app.
 It was an application done in node, that shows how to get prompts and feedback from the user.
 
-Any questions can be sent to me Thomas Stimac, on my porfolio page, at https://stimoe.github.io/Thomas-Portfolio-Page/ This was solely produced by myself, Thomas Stimac
+Any questions can be sent to me Thomas Stimac, on my porfolio page, at https://stimoe.github.io/Thomas-Portfolio-Page/ 
+This was solely produced by myself, Thomas Stimac
 
 This app can also be found at my github, at https://github.com/Stimoe
