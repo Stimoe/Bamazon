@@ -85,8 +85,6 @@ function buyItem() {
         });
     });
 }
-
-
 function updateProduct(answer, stock, answerId) {
     newStock = (stock - answer)
     var query = connection.query(
@@ -106,23 +104,4 @@ function updateProduct(answer, stock, answerId) {
         }
     );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
