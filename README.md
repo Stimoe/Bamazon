@@ -99,4 +99,4 @@ The last option is exit which quits the app.
 
 Those are the basics of the app.
 
-Any questions can be sent to me Thomas Stimac, on my porfolio page, at https://stimoe.github.io/Bootstrap-Portfolio/ This was solely produced by myself, Thomas Stimac
+Any questions can be sent to me Thomas Stimac, on my porfolio page, at https://stimoe.github.io/Thomas-Portfolio-Page/ This was solely produced by myself, Thomas Stimac
