@@ -131,6 +131,7 @@ function addInventory() {
     })
 }
 function addNewProduct() {
+    //This handles the prompt for adding new products
     inquirer.prompt([{
             type: "input",
             name: "name",
