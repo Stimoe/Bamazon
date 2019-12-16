@@ -106,7 +106,7 @@ function addInventory() {
                         chosenItem = results[i];
                     }
                 }
-          
+          //this updates the user on what happened through the console
                 stockQuantity = parseInt(chosenItem.stock_quantity);
                 stockToAdd = parseInt(answer.newUnits);
                 newStock = (stockQuantity + stockToAdd);
@@ -156,6 +156,7 @@ function addNewProduct() {
             message: "How many do you want in inventory?"
         }
     ]).then(function (answer) {
+        //this is feedback for what happened
         console.log("Inserting a new product...\n");
         var query = connection.query(
             "INSERT INTO products SET ?", {
@@ -167,7 +168,7 @@ function addNewProduct() {
             function (err) {
                 if (err) throw err;
                 console.log("Product created!\n");
-                // Call updateProduct AFTER the INSERT completes
+               
                 menuOptions();
             }
         );
