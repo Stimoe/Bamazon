@@ -18,6 +18,7 @@ connection.connect(function (err) {
 });
 
 function start(){
+    //this is the initial prompt
     inquirer
     .prompt({
         name: "action",
@@ -28,6 +29,7 @@ function start(){
             "Exit"
         ]
     })
+    //this is a switch case depending on what option they choose
     .then(function (answer) {
         switch (answer.action) {
             case "View Products for Sale":
@@ -41,6 +43,7 @@ function start(){
     });
 }
 function displayProducts() {
+    //this is the option to show all products
     console.log("Selecting all products...\n");
     connection.query("SELECT id,product_name,price,stock_quantity  FROM products", function (err, res) {
         if (err) throw err;
@@ -51,6 +54,7 @@ function displayProducts() {
 }
 
 function buyItem() {
+    //this is the function to buy an item
     inquirer.prompt([{
             type: "text",
             name: "id",
@@ -83,6 +87,7 @@ function buyItem() {
     });
 }
 function updateProduct(answer, stock, answerId) {
+    //this is the function to update the product
     newStock = (stock - answer)
     var query = connection.query(
         "UPDATE products SET ? WHERE ?",
