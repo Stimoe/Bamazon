@@ -106,4 +106,3 @@ function updateProduct(answer, stock, answerId) {
         }
     );
 }
-
