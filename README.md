@@ -98,6 +98,7 @@ At the end you see,
 The last option is exit which quits the app.
 
 Those are the basics of the app.
+It was an application done in node, that shows how to get prompts and feedback from the user.
 
 Any questions can be sent to me Thomas Stimac, on my porfolio page, at https://stimoe.github.io/Thomas-Portfolio-Page/ This was solely produced by myself, Thomas Stimac
 
