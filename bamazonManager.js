@@ -17,6 +17,7 @@ connection.connect(function (err) {
     menuOptions()
 });
 function menuOptions() {
+    //this handles the initial prompt
     inquirer
         .prompt({
             name: "action",
@@ -30,6 +31,7 @@ function menuOptions() {
                 "Exit"
             ]
         })
+        //this is a switch case depending on what option they choose
         .then(function (answer) {
             switch (answer.action) {
                 case "View Products for Sale":
@@ -64,6 +66,7 @@ function showProducts() {
     });
 }
 function showLowInventory() {
+    //this shows what inventory are low, which in this case is considered less than 5
     var query = "SELECT stock_quantity,product_name FROM products GROUP BY stock_quantity < 5";
     connection.query(query, function (err, res) {
         if (err) throw err;
