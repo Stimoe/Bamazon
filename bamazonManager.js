@@ -2,13 +2,10 @@ var mysql = require("mysql");
 var inquirer = require("inquirer")
 var connection = mysql.createConnection({
     host: "localhost",
-
     // Your port; if not 3306
     port: 3306,
-
     // Your username
     user: "root",
-
     // Your password
     password: "password",
     database: "bAmazon_DB"
@@ -19,7 +16,6 @@ connection.connect(function (err) {
     //   afterConnection();
     menuOptions()
 });
-
 function menuOptions() {
     inquirer
         .prompt({
@@ -58,7 +54,6 @@ function menuOptions() {
             }
         });
 }
-
 function showProducts() {
     console.log("Selecting all products...\n");
     connection.query("SELECT id,product_name,price,stock_quantity FROM products", function (err, res) {
@@ -68,7 +63,6 @@ function showProducts() {
         menuOptions();
     });
 }
-
 function showLowInventory() {
     var query = "SELECT stock_quantity,product_name FROM products GROUP BY stock_quantity < 5";
     connection.query(query, function (err, res) {
@@ -79,7 +73,6 @@ function showLowInventory() {
         menuOptions()
     });
 }
-
 function addInventory() {
     connection.query("SELECT * FROM products", function (err, results) {
         if (err) throw err;
@@ -137,7 +130,6 @@ function addInventory() {
             })
     })
 }
-
 function addNewProduct() {
     inquirer.prompt([{
             type: "input",
@@ -175,6 +167,6 @@ function addNewProduct() {
                 menuOptions();
             }
         );
-        console.log(query.sql);
+       
     })
 }
