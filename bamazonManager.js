@@ -110,7 +110,7 @@ function addInventory() {
                         chosenItem = results[i];
                     }
                 }
-                // console.log(chosenItem);
+          
                 stockQuantity = parseInt(chosenItem.stock_quantity);
                 stockToAdd = parseInt(answer.newUnits);
                 newStock = (stockQuantity + stockToAdd);
